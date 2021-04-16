@@ -15,5 +15,15 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }
+
+        val btn_third = findViewById<Button>(R.id.btnThird)
+        btn_third.setOnClickListener {
+            val intent = Intent(this, ThirdActivity::class.java)
+            intent.putExtra("saludo", "Hola desde el MainActivity")
+            // TODO: enviar una variable de tipo entero con tu edad
+            val edad = 41
+
+            startActivity(intent)
+        }
     }
 }
