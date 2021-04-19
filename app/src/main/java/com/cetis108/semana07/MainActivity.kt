@@ -20,8 +20,10 @@ class MainActivity : AppCompatActivity() {
         btn_third.setOnClickListener {
             val intent = Intent(this, ThirdActivity::class.java)
             intent.putExtra("saludo", "Hola desde el MainActivity")
-            // TODO: enviar una variable de tipo entero con tu edad
-            val edad = 41
+
+            val edad: Int = 41
+            intent.putExtra("edad", edad)
+            // intent.putExtra("edad", "Tu edad es $edad años")
 
             startActivity(intent)
         }
